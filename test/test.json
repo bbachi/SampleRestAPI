@@ -1,0 +1,9 @@
+{
+    "retentionPromoURL":"http://txaixebxindxd01:13180/cd-service/gme/cdws/odata.svc/CustomMetas()?&$filter=KeyName eq 'priority' or KeyName eq 'region' or StringValue eq 'CEN' or StringValue eq 'Early Touch' or StringValue eq 'Late Touch Reminder'&$expand=Component&$format=json",
+    "messagesPromoURL":"http://txaixebxindxd01:13180/cd-service/gme/cdws/odata.svc/CustomMetas()?&$filter=StringValue eq 'Free Flow Targeted Message' &$expand=Component&$format=json",
+    "servicesPromoURL":"http://txaixebxindxd01:13180/cd-service/gme/cdws/odata.svc/CustomMetas()?&$filter=KeyName eq 'priority' or StringValue eq 'Auto Pay' or StringValue eq 'Paperless'&$expand=Component&$format=json",
+    "overridePromoURL":"http://txaixebxindxd01:13180/cd-service/gme/cdws/odata.svc/CustomMetas()?$filter=KeyName eq 'override' and StringValue eq 'Yes'&$expand=Component&$format=json",
+    "defaultPromoURL": "http://txaixebxindxd01:13180/cd-service/gme/cdws/odata.svc/CustomMetas()?$filter=KeyName eq 'Default'&$expand=Component&$format=json",
+    "componentPresURL":"http://txaixebxindxd01:13180/cd-service/gme/cdws/odata.svc/Components(ItemId=7144,PublicationId=123)/ComponentPresentations?$format=json",
+    "baseURL": "http://localhost:3080"
+}
