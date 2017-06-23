@@ -14,7 +14,7 @@ Type: npm start This will start the server.
 
 ### http://localhost:3080/test/get/something (GET)
 
-### http://localhost:3080/test/get/something (POST)
+### http://localhost:3080/test/post/something (POST)
 
    post some data as json format.
 
