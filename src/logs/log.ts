@@ -1,31 +1,16 @@
-import * as winston from "winston";
-var path = require ('path');
-winston.transports.DailyRotateFile = require('winston-daily-rotate-file');
-require('dotenv').load();
+import * as log4js from 'log4js';
+import * as env from '../../environment/environment'
 
 export class LoggerUtil {
 
-    logger: winston.LoggerInstance;
-    
+    logger: any;
+
     constructor(){
-        this.logger = new (winston.Logger)({
-            transports: [
-                new (winston.transports.Console)({prettyPrint: true}),
-                new (winston.transports.File)({ 
-                    filename: "/apps01/logs/nodeJS/sdlAPI/sdlAPI.log", 
-                    prettyPrint: true
-                }),
-                new (winston.transports.DailyRotateFile)({
-                    filename: "/apps01/logs/nodeJS/sdlAPI/sdlAPI.log",
-                    datePattern: process.env.ROLLING_DATE_PATTERN,
-                    prepend: true,
-                    prettyPrint: true
-                })
-            ]
-        });
+        this.logger = log4js.getLogger();
+        this.logger.level = env.LOG_LEVEL;
     }
 
-    public info(logText: any, msgType?:string): void{
+    public info(logText: any, msgType?:string): void {
         this.logger.info(logText);
     }
 
